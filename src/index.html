@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gray-900 text-gray-300 ">
+    <main class="mx-auto max-w-xl px-5 py-12">
+        <h1 class="text-4xl font-extrabold tracking-tight">ranking de chads </h1>
+        <p class="mt-1 text-sm opacity-60">vote nos melhores e cadastre seu chad</p>
+
+        <section id="ranking" class="mt-8 space-y-3"></section>
+
+        <p id="vazio" class="mt-8 space-y-3">
+            nenhum chad cadastrado
+
+        </p>
+
+
+        <div class="mt-10 rounded-xl border border-slate-700 bg-gray-400 p-5 ">
+            <h2 class="text-lg font-semibold">Cadastrar Chad</h2>
+
+            <input id="nome" maxlength="40" placeholder="nome chad"
+                class="mt-3 w-full rounded-lg border border-slate-700 bg-gray-600 px-4 py-3 outline-none focus:ring-2 focus:ring-red-950    ">
+
+            <textarea id="motivo" rows="3" maxlength="2000" placeholder="por que adicionar ele?"
+                class="mt-3 rounded-lg border border-gray-900 bg-gray-600 px-4 py-3 focus: ring-red-950 "></textarea>
+
+
+            <p id="erro" class="mt-3 hidden text-sm text-red-600">preecha o motivo</p>
+
+            <button id="add"
+                class="mt-3 rounded-lg bg-gray-600 px-5 py-3 font-semibold text-gray-200 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-red-950  ">
+                adicionar ao ranking
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>
