@@ -3,15 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#111827">
     <title>Ranking de Chads</title>
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-gray-900 text-gray-300">
-    <main class="mx-auto max-w-xl px-5 py-12">
-        <h1 class="text-4xl font-extrabold tracking-tight">Ranking de chads</h1>
-        <p class="mt-1 text-sm opacity-60">Vote nos melhores e cadastre seu chad</p>
+<body
+    class="min-h-dvh bg-gray-900 text-gray-300 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
+    <main class="mx-auto w-full max-w-xl px-4 py-8 sm:px-6 sm:py-12 md:max-w-2xl md:py-16">
+        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">Ranking de chads</h1>
+        <p class="mt-1 text-sm opacity-60 md:text-base">Vote nos melhores e cadastre seu chad</p>
 
         <section id="ranking" class="mt-8 space-y-3"></section>
 
@@ -19,19 +21,19 @@
             Nenhum chad ainda. Cadastre o primeiro abaixo.
         </p>
 
-        <div class="mt-10 rounded-xl border border-slate-700 bg-gray-800 p-5">
+        <div class="mt-10 rounded-xl border border-slate-700 bg-gray-800 p-4 sm:p-5">
             <h2 class="text-lg font-semibold">Cadastrar chad</h2>
 
             <input id="nome" maxlength="40" placeholder="Nome do chad"
-                class="mt-3 w-full rounded-lg border border-slate-700 bg-gray-600 px-4 py-3 outline-none focus:ring-2 focus:ring-red-500">
+                class="mt-3 w-full rounded-lg border border-slate-700 bg-gray-600 px-4 py-3 text-base text-gray-100 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-red-500">
 
             <textarea id="motivo" rows="3" maxlength="200" placeholder="Por que adicionar ele?"
-                class="mt-3 w-full rounded-lg border border-slate-700 bg-gray-600 px-4 py-3 outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                class="mt-3 w-full rounded-lg border border-slate-700 bg-gray-600 px-4 py-3 text-base text-gray-100 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-red-500"></textarea>
 
             <p id="erro" class="mt-3 hidden text-sm text-red-500">Preencha o nome e o motivo.</p>
 
             <button id="add"
-                class="mt-3 rounded-lg bg-gray-600 px-5 py-3 font-semibold text-gray-200 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500">
+                class="mt-3 min-h-[44px] w-full touch-manipulation rounded-lg bg-gray-600 px-5 py-3 font-semibold text-gray-200 hover:bg-gray-500 active:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 sm:w-auto">
                 Adicionar ao ranking
             </button>
         </div>

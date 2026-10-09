@@ -21,14 +21,14 @@ function render() {
         const topo = pos === 0;
 
         const card = document.createElement('article');
-        card.className = 'flex items-start gap-4 rounded-xl border p-4 ' +
+        card.className = 'flex items-start gap-3 rounded-xl border p-3 sm:gap-4 sm:p-4 ' +
             (topo
-                ? 'border-amber-400 bg-amber-50 dark:bg-amber-950/30'
-                : 'border-slate-300 bg-white dark:border-slate-700 dark:bg-slate-800');
+                ? 'border-amber-500 bg-amber-950/30'
+                : 'border-slate-700 bg-gray-800');
 
         const rank = document.createElement('div');
         rank.textContent = (pos + 1) + 'º';
-        rank.className = 'w-10 shrink-0 text-2xl font-extrabold ' + (topo ? 'text-amber-600' : 'opacity-50');
+        rank.className = 'w-9 shrink-0 text-xl font-extrabold sm:w-10 sm:text-2xl ' + (topo ? 'text-amber-500' : 'opacity-50');
 
         const info = document.createElement('div');
         info.className = 'min-w-0 flex-1';
@@ -39,13 +39,13 @@ function render() {
 
         const motivo = document.createElement('p');
         motivo.textContent = c.motivo;
-        motivo.className = 'mt-1 text-sm opacity-75 break-words';
+        motivo.className = 'mt-1 text-sm opacity-75 break-words md:text-base';
 
         info.append(nome, motivo);
 
         const voto = document.createElement('button');
         voto.textContent = 'Votar (' + c.votos + ')';
-        voto.className = 'shrink-0 rounded-lg border border-indigo-700 px-3 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:border-indigo-400 dark:text-indigo-300';
+        voto.className = 'min-h-[44px] shrink-0 touch-manipulation rounded-lg border border-gray-500 px-3 py-2 text-sm font-semibold text-gray-200 hover:bg-gray-600 active:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500';
 
         voto.onclick = () => {
             c.votos++;
